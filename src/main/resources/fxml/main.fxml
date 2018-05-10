@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="299.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pwr.patrykzdral.calc.controller.MainController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="51.0" prefWidth="304.0">
+         <children>
+            <Label text="Ultra Calculator">
+               <font>
+                  <Font name="Georgia" size="34.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="TOP_RIGHT" prefHeight="10.0" prefWidth="299.0">
+         <children>
+            <Label fx:id="labelHalfResult" prefHeight="21.0" prefWidth="268.0" />
+            <Region prefHeight="21.0" prefWidth="15.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="41.0" prefWidth="299.0">
+         <children>
+            <TextField fx:id="textFieldScreen" alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="272.0" />
+         </children>
+      </HBox>
+      <Region prefHeight="23.0" prefWidth="299.0" />
+      <HBox prefHeight="67.0" prefWidth="299.0">
+         <children>
+            <VBox fx:id="offButton" alignment="CENTER" onDragDetected="#offButton_onAction" prefHeight="67.0" prefWidth="78.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="55.0" text="OFF" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="67.0" prefWidth="78.0">
+               <children>
+                  <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearButton_onAction" prefHeight="50.0" prefWidth="55.0" text="AC" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="67.0" prefWidth="78.0">
+               <children>
+                  <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButton_onAction" prefHeight="50.0" prefWidth="55.0" text="SAVE" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="67.0" prefWidth="78.0">
+               <children>
+                  <Button fx:id="divideButton" mnemonicParsing="false" onAction="#buttonsOperator_onAction" prefHeight="50.0" prefWidth="55.0" text="/" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="67.0" prefWidth="299.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="67.0" prefWidth="78.0">
+               <children>
+                  <Button fx:id="sevenButton" mnemonicParsing="false" onAction="#buttons_onAction" prefHeight="50.0" prefWidth="55.0" text="7" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="67.0" prefWidth="78.0">
+               <children>
+                  <Button fx:id="eightButton" mnemonicParsing="false" onAction="#buttons_onAction" prefHeight="50.0" prefWidth="55.0" text="8" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="67.0" prefWidth="78.0">
+               <children>
+                  <Button fx:id="nineButton" mnemonicParsing="false" onAction="#buttons_onAction" prefHeight="50.0" prefWidth="55.0" text="9" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="67.0" prefWidth="78.0">
+               <children>
+                  <Button fx:id="multiplyButton" mnemonicParsing="false" onAction="#buttonsOperator_onAction" prefHeight="50.0" prefWidth="55.0" text="*" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="67.0" prefWidth="299.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="67.0" prefWidth="78.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#buttons_onAction" prefHeight="50.0" prefWidth="55.0" text="4" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="67.0" prefWidth="78.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#buttons_onAction" prefHeight="50.0" prefWidth="55.0" text="5" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="67.0" prefWidth="78.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#buttons_onAction" prefHeight="50.0" prefWidth="55.0" text="6" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="67.0" prefWidth="78.0">
+               <children>
+                  <Button fx:id="subtractButton" mnemonicParsing="false" onAction="#buttonsOperator_onAction" prefHeight="50.0" prefWidth="55.0" text="-" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="67.0" prefWidth="299.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="67.0" prefWidth="78.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#buttons_onAction" prefHeight="50.0" prefWidth="55.0" text="1" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="67.0" prefWidth="78.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#buttons_onAction" prefHeight="50.0" prefWidth="55.0" text="2" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="67.0" prefWidth="78.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#buttons_onAction" prefHeight="50.0" prefWidth="55.0" text="3" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="67.0" prefWidth="78.0">
+               <children>
+                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#buttonsOperator_onAction" prefHeight="50.0" prefWidth="55.0" text="+" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="67.0" prefWidth="299.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="67.0" prefWidth="78.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#buttons_onAction" prefHeight="50.0" prefWidth="55.0" text="0" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="67.0" prefWidth="78.0">
+               <children>
+                  <Button fx:id="dotButton" mnemonicParsing="false" onAction="#dotButton_onAction" prefHeight="50.0" prefWidth="55.0" text="." />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="67.0" prefWidth="139.0">
+               <children>
+                  <Button fx:id="equalButton" mnemonicParsing="false" onAction="#equalButton_onAction" prefHeight="50.0" prefWidth="133.0" text="=" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

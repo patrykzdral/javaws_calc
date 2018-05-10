@@ -1,0 +1,1 @@
+#Program, który można  uruchomić poprzez JavaWS. Podczas realizacji zadania należy wygenerować plik JNLP i skorzystać z lokalnej instacji serwera Apache Tomcat (na nim opublikowane powinny być plik JNLP oraz jar z aplikacją). 
