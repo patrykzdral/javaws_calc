@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<jnlp spec="1.0+" codebase="http://localhost:8080/" href="Calc.jnlp">
+	<information>
+		<title>Jnlp Testing</title>
+		<vendor>PATRYK ZDRAL</vendor>
+		<homepage href="http://localhost:8080/" />
+		<description>Testing online calc</description>
+	</information>
+	<security>
+		<all-permissions/>
+	</security>
+	<resources>
+		<j2se version="1.8" />
+		<jar href="calc.jar" />
+	</resources>
+	<application-desc main-class="com.pwr.patrykzdral.calc.app.Calc" />
+</jnlp>

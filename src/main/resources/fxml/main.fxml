@@ -7,11 +7,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="299.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pwr.patrykzdral.calc.controller.MainController">
+<VBox fx:id="vBoxMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541.0" prefWidth="301.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pwr.patrykzdral.calc.controller.MainController" stylesheets="/css/style.css">
    <children>
       <HBox alignment="CENTER" prefHeight="51.0" prefWidth="304.0">
          <children>
-            <Label text="Ultra Calculator">
+            <Label id="banner" text="Ultra Calculator" textFill="WHITE">
                <font>
                   <Font name="Georgia" size="34.0" />
                </font>
@@ -20,36 +20,36 @@
       </HBox>
       <HBox alignment="TOP_RIGHT" prefHeight="10.0" prefWidth="299.0">
          <children>
-            <Label fx:id="labelHalfResult" prefHeight="21.0" prefWidth="268.0" />
+            <Label fx:id="labelHalfResult" prefHeight="21.0" prefWidth="268.0" textFill="WHITE" />
             <Region prefHeight="21.0" prefWidth="15.0" />
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="41.0" prefWidth="299.0">
          <children>
-            <TextField fx:id="textFieldScreen" alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="272.0" />
+            <TextField fx:id="textFieldScreen" alignment="CENTER_RIGHT" editable="false" prefHeight="36.0" prefWidth="285.0" />
          </children>
       </HBox>
       <Region prefHeight="23.0" prefWidth="299.0" />
       <HBox prefHeight="67.0" prefWidth="299.0">
          <children>
-            <VBox fx:id="offButton" alignment="CENTER" onDragDetected="#offButton_onAction" prefHeight="67.0" prefWidth="78.0">
+            <VBox  alignment="CENTER"  prefHeight="67.0" prefWidth="78.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="55.0" text="OFF" />
+                  <Button fx:id="offButton" mnemonicParsing="false" prefHeight="50.0" onAction="#offButton_onAction" prefWidth="55.0" text="OFF" />
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="67.0" prefWidth="78.0">
                <children>
-                  <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearButton_onAction" prefHeight="50.0" prefWidth="55.0" text="AC" />
+                  <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearButton_onAction" prefHeight="50.0" prefWidth="55.0" text="CE" />
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="67.0" prefWidth="78.0">
                <children>
-                  <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButton_onAction" prefHeight="50.0" prefWidth="55.0" text="SAVE" />
+                  <Button fx:id="clearAllButton" mnemonicParsing="false" onAction="#clearAllButton_onAction" prefHeight="50.0" prefWidth="55.0" text="C" />
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="67.0" prefWidth="78.0">
                <children>
-                  <Button fx:id="divideButton" mnemonicParsing="false" onAction="#buttonsOperator_onAction" prefHeight="50.0" prefWidth="55.0" text="/" />
+                  <Button fx:id="buttonRemoveCypher" mnemonicParsing="false" onAction="#buttonRemoveCypher_onAction" prefHeight="50.0" prefWidth="55.0" text="&lt;-" />
                </children>
             </VBox>
          </children>
@@ -130,20 +130,45 @@
          <children>
             <VBox alignment="CENTER" prefHeight="67.0" prefWidth="78.0">
                <children>
+                  <Button fx:id="buttonSquareRoot" mnemonicParsing="false" onAction="#buttonsOperator_onAction" prefHeight="50.0" prefWidth="55.0" text="√" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="67.0" prefWidth="78.0">
+               <children>
+                  <Button fx:id="buttonPower" mnemonicParsing="false" onAction="#buttonsOperator_onAction" prefHeight="50.0" prefWidth="55.0" text="x^2" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="67.0" prefWidth="78.0">
+               <children>
+                  <Button fx:id="buttonFraction" mnemonicParsing="false" onAction="#buttonsOperator_onAction" prefHeight="50.0" prefWidth="55.0" text="1/x" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="67.0" prefWidth="78.0">
+               <children>
+                  <Button fx:id="divideButton" mnemonicParsing="false" onAction="#buttonsOperator_onAction" prefHeight="50.0" prefWidth="55.0" text="/" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="67.0" prefWidth="299.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="67.0" prefWidth="78.0">
+               <children>
                   <Button mnemonicParsing="false" onAction="#buttons_onAction" prefHeight="50.0" prefWidth="55.0" text="0" />
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="67.0" prefWidth="78.0">
                <children>
-                  <Button fx:id="dotButton" mnemonicParsing="false" onAction="#dotButton_onAction" prefHeight="50.0" prefWidth="55.0" text="." />
+                  <Button fx:id="dotButton" mnemonicParsing="false" onAction="#buttons_onAction" prefHeight="50.0" prefWidth="55.0" text="." />
                </children>
             </VBox>
-            <VBox alignment="CENTER" prefHeight="67.0" prefWidth="139.0">
+            <VBox alignment="CENTER" prefHeight="67.0" prefWidth="153.0">
                <children>
                   <Button fx:id="equalButton" mnemonicParsing="false" onAction="#equalButton_onAction" prefHeight="50.0" prefWidth="133.0" text="=" />
                </children>
             </VBox>
          </children>
       </HBox>
+      <Region prefHeight="26.0" prefWidth="299.0" />
    </children>
 </VBox>

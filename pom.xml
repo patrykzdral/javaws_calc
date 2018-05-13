@@ -38,7 +38,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>.Calc</mainClass>
+                            <mainClass>com.pwr.patrykzdral.calc.app.Calc</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
