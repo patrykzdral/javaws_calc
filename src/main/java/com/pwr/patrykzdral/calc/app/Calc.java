@@ -22,7 +22,7 @@ public class Calc extends Application {
             Parent root = loader.getRoot();
 
             primaryStage.setTitle("Calculator");
-            primaryStage.getIcons().add(new Image("/image/caculatorv.png"));
+            primaryStage.getIcons().add(new Image("/image/caculator.png"));
             primaryStage.setMinWidth(299);
             primaryStage.setMinHeight(520);
             primaryStage.setScene(new Scene(root, 299, 520));
